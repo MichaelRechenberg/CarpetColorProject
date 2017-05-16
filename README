@@ -6,6 +6,8 @@ What I Did:
 
 How I Did It:
 
+Using Python 2.7
+
 The appropriate environment can be installed w/ conda using
   conda env create -f environment.yml
   source activate CarpetColorProject

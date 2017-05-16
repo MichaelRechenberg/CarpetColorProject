@@ -1,4 +1,5 @@
 # Python script for Uncle Kevin
+# (Yes it's Python 2.7, bite me)
 
 # Author: Michael Rechenberg
 
