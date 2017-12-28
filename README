@@ -70,4 +70,6 @@ What I Learned Along The Way:
 
 Windows Users:
   The environment.yml file is meant for Linux distros. For Windows users, you should
-  install the conda environment from windows_environment.yml instead of environment.yml
+  install the conda environment from windows_environment.yml instead of environment.yml.
+  The conda environment from windows_environment.yml will be named "carpet-windows"
+  by default.
