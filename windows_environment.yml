@@ -1,0 +1,32 @@
+name: carpet-windows
+channels:
+  - menpo
+  - conda-forge
+  - defaults
+dependencies:
+  - icu=58.2=vc9_0
+  - jpeg=9b=vc9_2
+  - libpng=1.6.34=vc9_0
+  - libtiff=4.0.9=vc9_0
+  - libwebp=0.5.2=vc9_7
+  - qt=5.6.2=vc9_1
+  - webcolors=1.7=py27_0
+  - zlib=1.2.11=vc9_0
+  - ca-certificates=2017.08.26=h94faf87_0
+  - certifi=2017.11.5=py27h03b45e1_0
+  - icc_rt=2017.0.4=h97af966_0
+  - intel-openmp=2018.0.0=hd92c6cd_8
+  - mkl=2018.0.1=h2108138_4
+  - numpy=1.13.3=py27h9ac254c_0
+  - openssl=1.0.2n=hc64555f_0
+  - pip=9.0.1=py27hdaa76b4_4
+  - python=2.7.14=h8c3f1cb_23
+  - scipy=1.0.0=py27h7cd1477_0
+  - setuptools=36.5.0=py27ha483b79_0
+  - vc=9=h7299396_1
+  - vs2008_runtime=9.00.30729.1=hfaea7d5_1
+  - wheel=0.30.0=py27ha643586_1
+  - wincertstore=0.2=py27hf04cefb_0
+  - opencv=2.4.11=py27_1
+prefix: C:\Users\micha\Anaconda3\envs\carpet-windows
+

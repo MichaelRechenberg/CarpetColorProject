@@ -12,12 +12,12 @@ The appropriate environment can be installed w/ conda using
   conda env create -f environment.yml
   source activate CarpetColorProject
 
-The code can then be run with 
+The code can then be run with
   python avg_color.py path_to_picture_directory csv_name
 
 
 First, I had to get a single representative RGB tuple for each picture of carpet to use for naming.
-I originally was going to use a simply arithmetic average in each RGB channel, but after reading 
+I originally was going to use a simply arithmetic average in each RGB channel, but after reading
   http://stackoverflow.com/questions/43111029/how-to-find-the-average-colour-of-an-image-in-python-with-opencv
   and modifying the code from that to fit our needs,
   it made more sense to use k-means to find the dominant color (which color was present the most)
@@ -35,18 +35,18 @@ One idea I had but did not implement would be to have multiple RGB values map to
   of points from a 'center' RGB value.
 
 On the first attempt I naively copy-pasted the k-means code from the StackOverflow post without
-  considering the parameters I was giving to the algorithm.  
-This led to poor performance: tn_ST138_Beale_Street_13_Evening_Sun had a dominant color of 
+  considering the parameters I was giving to the algorithm.
+This led to poor performance: tn_ST138_Beale_Street_13_Evening_Sun had a dominant color of
   (0,0,0) and was thus assigned the color 'Black' when clearly the swatch of carpet was a light tan color.
-The issue was that I was not giving enough thought into the 'k' parameter of k-means.  
+The issue was that I was not giving enough thought into the 'k' parameter of k-means.
 The code on the StackOverflow post had it's k parameter set to 5 because in the image the author
-  was working with there were clearly 5 different colors (macro picture of 5 lego pieces of 
+  was working with there were clearly 5 different colors (macro picture of 5 lego pieces of
   different sizes).
 However, you can see by looking at the images of carpet that I was trying to classify that
-  there are only 2 or 3 major colors present in the majority of the pictures, so when 
+  there are only 2 or 3 major colors present in the majority of the pictures, so when
   k=5 before the algorithm was trying to find 5 clusters (5 colors) out of an image that actually
-  only had 2 or 3 colors...this led to 
-Yes, some of the swatches of carpet had very elaborate designs with multiple colors 
+  only had 2 or 3 colors...this led to
+Yes, some of the swatches of carpet had very elaborate designs with multiple colors
   of similar frequency, but to best classify the majority of the carpet swatches
   setting k to 2 or 3 should have performed better than k=5.
 The change worked well.  The Beale_Street picture was given a dominant color of (207, 189, 155) -> tan
@@ -67,11 +67,7 @@ What I Learned Along The Way:
   Having a 'golden standard' dataset would make evaluation much easier
   OpenCV opens images in BGR mode instead of RGB mode
   csv Python module
-  
 
-
-
-
-
-
-
+Windows Users:
+  The environment.yml file is meant for Linux distros. For Windows users, you should
+  install the conda environment from windows_environment.yml instead of environment.yml
